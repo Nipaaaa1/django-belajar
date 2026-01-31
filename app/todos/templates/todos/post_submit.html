@@ -1,7 +1,5 @@
 <form method="POST" action="{% url 'post_example' %}">
   {% csrf_token %}
-  <input type="text" name="name">
-  <input type="text" name="age">
-  <input type="text" name="job">
+  {{ form.as_p }}
   <button type="submit">Submit</button>
 </form>
