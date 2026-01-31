@@ -27,3 +27,12 @@ def post_example(request):
 def post_submit(request):
     form = PersonForm()
     return render(request, "todos/post_submit.html", { "form": form })
+
+def templating_example(request):
+    context = {
+        "name": "Nipa",
+        "age": 20,
+        "skills": ["Typescript", "Python", "Django", "Docker"]
+    }
+
+    return render(request, "todos/templating.html", context)

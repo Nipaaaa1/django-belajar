@@ -1,5 +1,13 @@
+{% extends "todos/base.html" %}
+
+{% block title %}Form Submit{% endblock %}
+
+{% block content %}
+
 <form method="POST" action="{% url 'post_example' %}">
   {% csrf_token %}
   {{ form.as_p }}
   <button type="submit">Submit</button>
 </form>
+
+{% endblock %}
