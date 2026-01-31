@@ -1,0 +1,15 @@
+{% extends "todos/base.html" %}
+
+{% block title %}{{ person.name }} Detail{% endblock %}
+
+{% block content %}
+
+<h1>Hello {{ person.name }}</h1>
+
+<ul>
+  {% for todo in person.todos.all %}
+  <li>{{ todo }}</li>
+  {% endfor %}
+</ul>
+
+{% endblock %}
